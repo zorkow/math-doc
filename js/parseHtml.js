@@ -28,7 +28,7 @@ replaceNode = function(node) {
   element.setAttribute('id', id);
   var text = sre.DomUtil.createTextNode(
     (display === 'inline' ? '\\(' : '\\[') +
-      latex +
+      cleanupText(latex) +
       (display === 'inline' ? '\\)' : '\\]')
   );
   element.appendChild(text);
@@ -88,6 +88,14 @@ makeNode = function(tag, attributes) {
 addTextNode = function(node, text) {
   var textNode = sre.DomUtil.createTextNode(text);
   node.appendChild(textNode);
+};
+
+
+cleanupText = function(text) {
+  text = text.replace(/%\n/g, '');
+  // This is due to lack of treatment in MathJax.
+  text = text.replace(/operatornamewithlimits/g, 'operatorname*');
+  return text;
 };
 
 

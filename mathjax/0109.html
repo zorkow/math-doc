@@ -12,13 +12,17 @@
     <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   TeX: { equationNumbers: {autoNumber: "AMS"} },
-  MMLorHTML: {MSIE: "HTML"},
+menuSettings: {renderer: "CommonHTML", collapsible: true},
+MMLorHTML: {MSIE: "HTML"},
   AssistiveMML: {disabled: true},
-  "fast-preview": {disabled: true}
+"fast-preview": {disabled: true},
+showMathMenu: false
 });
-MathJax.Ajax.config.path["SRE"] = "../mathjax";
+<!-- MathJax.Ajax.config.path["SRE"] = "../mathjax"; -->
 </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"> </script>
+<script src="context_menu.js"></script>
+<script src="annotation_menu.js"></script>
   </head>
   <body>
     <div class="ltx_page_main">
@@ -113,8 +117,7 @@ below is <cite class="ltx_cite">[]</cite>.</p>
 with the set <span class="math inline" id="S2.Thmdefn1.p1.m4">\(F^{n}\)</span>, with component-wise addition and scalar multiplication.
 A <span class="ltx_text ltx_font_italic">bilinear form</span> on <span class="math inline" id="S2.Thmdefn1.p1.m5">\(V\)</span> is a function
 <span class="math inline" id="S2.Thmdefn1.p1.m6">\(f:V\times V\rightarrow F\)</span> which is linear in both arguments, i.e,
-<span class="math inline" id="S2.Thmdefn1.p1.m7">\(f(\alpha u+u^{\prime},\beta v+v^{\prime})=\alpha\beta f(u,v)+\alpha f(u,v^{%
-\prime})+\beta f(u^{\prime},v)+f(u^{\prime},v^{\prime})\)</span> for <span class="math inline" id="S2.Thmdefn1.p1.m8">\(u,u^{\prime},v,v^{\prime}\in V\)</span> and <span class="math inline" id="S2.Thmdefn1.p1.m9">\(\alpha,\beta\in F\)</span>. A <span class="ltx_text ltx_font_italic">symmetric </span> bilinear form is a bilinear form <span class="math inline" id="S2.Thmdefn1.p1.m10">\(f\)</span> with <span class="math inline" id="S2.Thmdefn1.p1.m11">\(f(u,v)=f(v,u)\)</span> for
+<span class="math inline" id="S2.Thmdefn1.p1.m7">\(f(\alpha u+u^{\prime},\beta v+v^{\prime})=\alpha\beta f(u,v)+\alpha f(u,v^{\prime})+\beta f(u^{\prime},v)+f(u^{\prime},v^{\prime})\)</span> for <span class="math inline" id="S2.Thmdefn1.p1.m8">\(u,u^{\prime},v,v^{\prime}\in V\)</span> and <span class="math inline" id="S2.Thmdefn1.p1.m9">\(\alpha,\beta\in F\)</span>. A <span class="ltx_text ltx_font_italic">symmetric </span> bilinear form is a bilinear form <span class="math inline" id="S2.Thmdefn1.p1.m10">\(f\)</span> with <span class="math inline" id="S2.Thmdefn1.p1.m11">\(f(u,v)=f(v,u)\)</span> for
 all <span class="math inline" id="S2.Thmdefn1.p1.m12">\(u,v\in V\)</span>. We will call a symmetric bilinear form on <span class="math inline" id="S2.Thmdefn1.p1.m13">\(V\)</span> as an <span class="ltx_text ltx_font_italic">inner product</span> on <span class="math inline" id="S2.Thmdefn1.p1.m14">\(V\)</span>. The inner product on <span class="math inline" id="S2.Thmdefn1.p1.m15">\(V\)</span> given by
 <span class="math inline" id="S2.Thmdefn1.p1.m16">\(\langle u,v\rangle=u_{1}v_{1}+\cdots+u_{n}v_{n}\)</span> where,
 <span class="math inline" id="S2.Thmdefn1.p1.m17">\(u=(u_{1},\ldots,u_{n})\)</span> and <span class="math inline" id="S2.Thmdefn1.p1.m18">\(v=(v_{1},\ldots,v_{n})\)</span> will be called the <span class="ltx_text ltx_font_italic">standard</span> inner product on <span class="math inline" id="S2.Thmdefn1.p1.m19">\(V\)</span>.
@@ -187,8 +190,7 @@ prime divisors of <span class="math inline" id="S2.Thmdefn5.p1.m3">\(n\)</span>.
                         <span class="math inline" id="S2.Ex1.m1">\(\displaystyle\mathbb{Z}_{n}\)</span>
                       </td>
                       <td class="ltx_td ltx_align_left">
-                        <span class="math inline" id="S2.Ex1.m2">\(\displaystyle\longrightarrow\mathbb{Z}_{p_{1}^{\alpha_{1}}}\times\mathbb{Z}_{p%
-_{2}^{\alpha_{2}}}\times\cdots\times\mathbb{Z}_{p_{k}^{\alpha_{k}}}\)</span>
+                        <span class="math inline" id="S2.Ex1.m2">\(\displaystyle\longrightarrow\mathbb{Z}_{p_{1}^{\alpha_{1}}}\times\mathbb{Z}_{p_{2}^{\alpha_{2}}}\times\cdots\times\mathbb{Z}_{p_{k}^{\alpha_{k}}}\)</span>
                       </td>
                       <td class="ltx_eqn_center_padright"/>
                     </tr>
@@ -198,8 +200,7 @@ _{2}^{\alpha_{2}}}\times\cdots\times\mathbb{Z}_{p_{k}^{\alpha_{k}}}\)</span>
                         <span class="math inline" id="S2.E1.m1">\(\displaystyle s\)</span>
                       </td>
                       <td class="ltx_td ltx_align_left">
-                        <span class="math inline" id="S2.E1.m2">\(\displaystyle\longmapsto(s\text{\rm\ mod }p_{1}^{\alpha_{1}},\ldots,s\text{\rm%
-\ mod }p_{k}^{\alpha_{k}}).\)</span>
+                        <span class="math inline" id="S2.E1.m2">\(\displaystyle\longmapsto(s\text{\rm\ mod }p_{1}^{\alpha_{1}},\ldots,s\text{\rm\ mod }p_{k}^{\alpha_{k}}).\)</span>
                       </td>
                       <td class="ltx_eqn_center_padright"/>
                       <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
@@ -361,8 +362,7 @@ permutations of <span class="math inline" id="S3.p1.m1">\(\mathbb{Z}_{n}\)</span
 collection is again a permutation (not necessarily in the collection). A
 collection <span class="math inline" id="S3.p1.m2">\({\cal P}\)</span> of permutations of <span class="math inline" id="S3.p1.m3">\(\mathbb{Z}_{n}\)</span> is said to satisfy property
 <span class="math inline" id="S3.p1.m4">\(\mathbf{(P1)}\)</span> if for any two distinct permutations <span class="math inline" id="S3.p1.m5">\(\sigma,\tau\)</span> in
-<span class="math inline" id="S3.p1.m6">\({\cal P}\)</span>, <span class="math inline" id="S3.p1.m7">\(\sigma+\tau\)</span> is again a permutation of <span class="math inline" id="S3.p1.m8">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S3.p1.m9">\(s(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{%
- satisfies }\mathbf{(P1)}\}\)</span>.</p>
+<span class="math inline" id="S3.p1.m6">\({\cal P}\)</span>, <span class="math inline" id="S3.p1.m7">\(\sigma+\tau\)</span> is again a permutation of <span class="math inline" id="S3.p1.m8">\(\mathbb{Z}_{n}\)</span>. Let <span class="math inline" id="S3.p1.m9">\(s(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{ satisfies }\mathbf{(P1)}\}\)</span>.</p>
                       </div>
                       <div id="S3.p2" class="ltx_para">
                         <p class="ltx_p">From Lemma <a href="#S2.Thmdefn8" title="Lemma 2.8. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
@@ -411,8 +411,7 @@ divisors of <span class="math inline" id="I1.i3.p1.m3">\(n\)</span>. Then there 
 isomorphism in Lemma <a href="#S2.Thmdefn5" title="Lemma 2.5 (Chinese Remainder Theorem). ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
                                     <span class="ltx_text ltx_ref_tag">2.5</span>
                                     </a>.
-Let <span class="math inline" id="I1.i3.p1.m11">\(S=\{s\in\mathbb{Z}_{n}:s=(s_{1},\ldots,s_{k})\text{ where }s_{i}\equiv c_{i}%
-\text{ mod }p_{i}\text{ for some }1\leq c_{i}\leq(p_{i}-1)/2\}\)</span>. Note that in
+Let <span class="math inline" id="I1.i3.p1.m11">\(S=\{s\in\mathbb{Z}_{n}:s=(s_{1},\ldots,s_{k})\text{ where }s_{i}\equiv c_{i}\text{ mod }p_{i}\text{ for some }1\leq c_{i}\leq(p_{i}-1)/2\}\)</span>. Note that in
 the description of <span class="math inline" id="I1.i3.p1.m12">\(S\)</span>, each <span class="math inline" id="I1.i3.p1.m13">\(s_{i}\)</span> has <span class="math inline" id="I1.i3.p1.m14">\(p_{i}^{\alpha_{i}-1}(p_{i}-1)/2\)</span> choices,
 and hence the set <span class="math inline" id="I1.i3.p1.m15">\(S\)</span> has the desired cardinality. Further each element of <span class="math inline" id="I1.i3.p1.m16">\(S\)</span> is invertible in
 <span class="math inline" id="I1.i3.p1.m17">\(\mathbb{Z}_{n}\)</span>. Now for <span class="math inline" id="I1.i3.p1.m18">\(s,t\in S\)</span>, we have
@@ -431,8 +430,7 @@ permutations in <span class="math inline" id="S3.p3.m5">\({\cal P}\)</span> with
 <span class="math inline" id="S3.p3.m7">\(\tau=t.(y+0,\ldots,y+n-1)\)</span>. Then
 <span class="math inline" id="S3.p3.m8">\(\sigma+\tau=(sx+ty)+(s+t).(0,1,\ldots,n-1)\)</span>. Since <span class="math inline" id="S3.p3.m9">\(s+t\)</span> is invertible, by
 observations (a) and (b), we conclude that <span class="math inline" id="S3.p3.m10">\(\sigma+\tau\)</span> is a permutation.
-Thus <span class="math inline" id="S3.p3.m11">\({\cal P}\)</span> satisfies <span class="math inline" id="S3.p3.m12">\(\mathbf{(P1)}\)</span>. Finally we observe that <span class="math inline" id="S3.p3.m13">\(|{\cal P}|=n.|S|=n.\prod_{i=1}^{k}p_{i}^{\alpha_{i}-1}(p_{i}-1)/2=(n.\phi(n))/%
-2^{k}\)</span>.
+Thus <span class="math inline" id="S3.p3.m11">\({\cal P}\)</span> satisfies <span class="math inline" id="S3.p3.m12">\(\mathbf{(P1)}\)</span>. Finally we observe that <span class="math inline" id="S3.p3.m13">\(|{\cal P}|=n.|S|=n.\prod_{i=1}^{k}p_{i}^{\alpha_{i}-1}(p_{i}-1)/2=(n.\phi(n))/2^{k}\)</span>.
 This proves the lemma.
 ∎</p>
                             </div>
@@ -496,8 +494,7 @@ on <span class="math inline" id="S3.p6.m19">\(({\mathbb{Z}}_{n})^{n}\)</span>. T
                                     <tr class="ltx_equation ltx_align_baseline">
                                       <td class="ltx_eqn_center_padleft"/>
                                       <td class="ltx_align_center">
-                                        <span class="math display" id="S3.E2.m1">\[\langle A,A\rangle=\sum_{i=0}^{n-1}i^{2}=\frac{n}{6}(n-1)(2n-1)\equiv 0\quad(%
-\text{mod }n).\]</span>
+                                        <span class="math display" id="S3.E2.m1">\[\langle A,A\rangle=\sum_{i=0}^{n-1}i^{2}=\frac{n}{6}(n-1)(2n-1)\equiv 0\quad(\text{mod }n).\]</span>
                                       </td>
                                       <td class="ltx_eqn_center_padright"/>
                                       <td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right">
@@ -559,8 +556,7 @@ collection of permutations of <span class="math inline" id="S4.p1.m1">\(\mathbb{
 sum up to a non-permutation. We say that a collection <span class="math inline" id="S4.p1.m2">\({\cal P}\)</span> of
 permutations of <span class="math inline" id="S4.p1.m3">\(\mathbb{Z}_{n}\)</span> satisfies property <span class="math inline" id="S4.p1.m4">\(\mathbf{(P2)}\)</span> if any two
 distinct permutations in <span class="math inline" id="S4.p1.m5">\({\cal P}\)</span> sum up to a non-permutation. Let
-<span class="math inline" id="S4.p1.m6">\(t(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{%
- satisfies
+<span class="math inline" id="S4.p1.m6">\(t(n)=\max\{|{\cal P}|:{\cal P}\subseteq{\cal S}(\mathbb{Z}_{n}),{\cal P}\text{ satisfies
 }\mathbf{(P2)}\}\)</span>. From Lemma <a href="#S2.Thmdefn8" title="Lemma 2.8. ‣ 2 Preliminaries ‣ On Additive Combinatorics of Permutations of Zn." class="ltx_ref">
                                       <span class="ltx_text ltx_ref_tag">2.8</span>
                                       </a>, we see that <span class="math inline" id="S4.p1.m7">\(t(n)=n!\)</span>
@@ -683,8 +679,7 @@ as follows. We color the edge <span class="math inline" id="S4.p8.m18">\(ij\)</s
 color <span class="math inline" id="S4.p9.m2">\(i\)</span> span a bipartite subgraph of <span class="math inline" id="S4.p9.m3">\(K_{m}\)</span>. We prove this by showing
 there are no monochromatic odd cycles. Assume <span class="math inline" id="S4.p9.m4">\(v_{1}v_{2}\ldots v_{l}\)</span> is a
 monochromatic odd cycle. Let <span class="math inline" id="S4.p9.m5">\(i\)</span> be the color of the edges in the cycle.
-Then <span class="math inline" id="S4.p9.m6">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{2}+s_{3}),\ldots,p_{i}|(s_{l-1}+s_{l}),p_{i}|(s_%
-{l}+s_{1})\)</span>. Adding the above we get <span class="math inline" id="S4.p9.m7">\(p_{i}|2(s_{1}+\cdots+s_{l})\)</span> or <span class="math inline" id="S4.p9.m8">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> as <span class="math inline" id="S4.p9.m9">\(p_{i}\)</span> is odd. Now, from the <span class="math inline" id="S4.p9.m10">\((l-1)/2\)</span> relations <span class="math inline" id="S4.p9.m11">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{3}+s_{4}),\ldots,p_{i}|(s_{l-2}+s_{l-1})\)</span> we get <span class="math inline" id="S4.p9.m12">\(p_{i}|(s_{1}+\cdots+s_{l-1})\)</span>. Combining this with <span class="math inline" id="S4.p9.m13">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> we
+Then <span class="math inline" id="S4.p9.m6">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{2}+s_{3}),\ldots,p_{i}|(s_{l-1}+s_{l}),p_{i}|(s_{l}+s_{1})\)</span>. Adding the above we get <span class="math inline" id="S4.p9.m7">\(p_{i}|2(s_{1}+\cdots+s_{l})\)</span> or <span class="math inline" id="S4.p9.m8">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> as <span class="math inline" id="S4.p9.m9">\(p_{i}\)</span> is odd. Now, from the <span class="math inline" id="S4.p9.m10">\((l-1)/2\)</span> relations <span class="math inline" id="S4.p9.m11">\(p_{i}|(s_{1}+s_{2}),p_{i}|(s_{3}+s_{4}),\ldots,p_{i}|(s_{l-2}+s_{l-1})\)</span> we get <span class="math inline" id="S4.p9.m12">\(p_{i}|(s_{1}+\cdots+s_{l-1})\)</span>. Combining this with <span class="math inline" id="S4.p9.m13">\(p_{i}|(s_{1}+\cdots+s_{l})\)</span> we
 get <span class="math inline" id="S4.p9.m14">\(p_{i}|s_{l}\)</span> which contradicts the fact that <span class="math inline" id="S4.p9.m15">\(s_{l}\)</span> in invertible in
 <span class="math inline" id="S4.p9.m16">\(\mathbb{Z}_{n}\)</span>. Thus there are no monochromatic odd cycles, and hence edges of
 a fixed color span a bipartite subgraph of <span class="math inline" id="S4.p9.m17">\(K_{m}\)</span>.</p>
